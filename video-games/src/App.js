@@ -1,18 +1,16 @@
-import Home from "./pages/home/Home";
-import { BrowserRouter, Routes, Route,} from "react-router-dom";
-import List from "./pages/home/list/List";
+import Home from "./components/Home/Home";
+import {  BrowserRouter,  Routes,  Route,} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-     <BrowserRouter>
-      <Routes>
-        <Route path="/">
-          <Route index element={<Home/>}/>
-          <Route path= "list" element={<List/>}/>
-        </Route>
-      </Routes>
-    </BrowserRouter>,
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            <Route index element= {<Home />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>,
     </div>
   );
 }
